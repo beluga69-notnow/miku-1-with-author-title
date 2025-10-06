@@ -1113,13 +1113,13 @@
         background-color: var(--secondary3-colour);
         border-bottom: 3px solid var(--primary3-colour)
     }
-/* 🌸 Làm sáng các khu vực bị tối trong theme */
+/* 🌸 Làm sáng các khu vực tối, không làm mờ nền */
 
 /* Thanh tên người dùng (top bar) */
 #app-mount .title_c38106 {
-    background-color: rgba(30, 30, 30, 0.35) !important;
+    background-color: rgba(255, 255, 255, 0.12) !important; /* sáng nhẹ */
     border-bottom: 2px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(8px) brightness(1.2);
+    color: #fff !important;
 }
 
 /* Hồ sơ người dùng (panel bên phải) */
@@ -1127,19 +1127,24 @@
 #app-mount .userProfileInnerThemedNonPremium__48b20,
 #app-mount .userProfileInnerThemedPremiumWithoutBanner__48b20,
 #app-mount .userProfileInnerThemedPremiumWithBanner__48b20 {
-    background-color: rgba(20, 20, 20, 0.25) !important;
-    backdrop-filter: blur(12px) brightness(1.3);
+    background-color: rgba(255, 255, 255, 0.10) !important;
+    color: #fff !important;
 }
 
 /* Khung gõ tin nhắn (chat input) */
 #app-mount .form_f75fb0 .scrollableContainer__74017 {
-    background-color: rgba(20, 20, 20, 0.25) !important;
-    backdrop-filter: blur(8px) brightness(1.2);
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #fff !important;
 }
 
-/* Bong bóng tin nhắn cũng nhẹ hơn một chút */
+/* Bong bóng tin nhắn */
 #app-mount .message__5126c .container_b7e1cb,
 #app-mount .message__5126c .contents_c19a55 {
-    background-color: rgba(25, 25, 25, 0.35) !important;
-    backdrop-filter: blur(6px) brightness(1.2);
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #fff !important;
+}
+
+/* Thanh trên cùng (username, icon mic, tai nghe, gear) */
+#app-mount .panels_c48ade {
+    background-color: rgba(255, 255, 255, 0.08) !important;
 }
