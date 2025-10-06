@@ -1100,7 +1100,7 @@
     #app-mount .contentWrapper__08434 .result__2dc39[style*="background-color: var(--premium-tier-1"] {background-color: var(--primary3-colour)!important;}
     #app-mount .contentWrapper__08434 .result__2dc39[style*="background-color: rgb(146, 154, 250);"] {background-color: var(--primary2-colour)!important}
 
-/*TopBar*/ 
+/*TopBar - (no author title)*/ 
 #app-mount .title_c38106::before {
     content: none !important;
 }
