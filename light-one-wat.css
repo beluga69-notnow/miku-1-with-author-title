@@ -1149,32 +1149,22 @@
     background-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-/* Làm sáng phần hồ sơ bên phải */
-#app-mount .userProfileInner__61cc1,
-#app-mount .userPanelOuter__37d01,
-#app-mount .container-1D34oG {
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    backdrop-filter: none !important;
+/* === Override to remove dark backgrounds === */
+* {
+  background-color: transparent !important;
+  backdrop-filter: none !important;
 }
 
-/* Làm sáng phần thanh trên cùng (tên người dùng, kênh, v.v.) */
-#app-mount .title_c38106,
-#app-mount .container__26baa {
-    background-color: rgba(255, 255, 255, 0.06) !important;
-    backdrop-filter: none !important;
-}
-
-/* Làm sáng phần nhập tin nhắn */
+/* Giữ lại một chút sáng nhẹ cho các khung chính */
+#app-mount .form_f75fb0,
 #app-mount .channelTextArea__74017,
 #app-mount .scrollableContainer__74017,
-#app-mount .form_f75fb0 .wrapper__44df5 {
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    backdrop-filter: none !important;
-}
-
-/* Làm sáng phần thông tin user ở góc trái dưới */
+#app-mount .userProfileInner__61cc1,
 #app-mount .panels_c48ade,
-#app-mount .container_b2ca13 {
-    background-color: rgba(255, 255, 255, 0.07) !important;
-    backdrop-filter: none !important;
+#app-mount .container_b2ca13,
+#app-mount .sidebar_c48ade,
+#app-mount .title_c38106,
+#app-mount .container__26baa {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(0, 255, 255, 0.08) !important;
 }
