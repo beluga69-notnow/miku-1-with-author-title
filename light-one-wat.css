@@ -1155,16 +1155,36 @@
   backdrop-filter: none !important;
 }
 
-/* Giữ lại một chút sáng nhẹ cho các khung chính */
-#app-mount .form_f75fb0,
-#app-mount .channelTextArea__74017,
-#app-mount .scrollableContainer__74017,
-#app-mount .userProfileInner__61cc1,
-#app-mount .panels_c48ade,
-#app-mount .container_b2ca13,
+
+/* Giảm độ sáng tổng thể một chút để bớt chói */
+#app-mount .content__23cab,
 #app-mount .sidebar_c48ade,
+#app-mount .userPanelOuter__37d01,
+#app-mount .panels_c48ade,
+#app-mount .container_b2ca13 {
+  background-color: rgba(255, 255, 255, 0.025) !important;
+  backdrop-filter: none !important;
+}
+
+/* Làm thanh trên sáng hơn, nhưng không đục */
 #app-mount .title_c38106,
 #app-mount .container__26baa {
-  background-color: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(0, 255, 255, 0.08) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: none !important;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.25) !important;
 }
+
+/* Giữ chat box vừa sáng nhẹ, không chói */
+#app-mount .form_f75fb0,
+#app-mount .channelTextArea__74017,
+#app-mount .scrollableContainer__74017 {
+  background-color: rgba(255, 255, 255, 0.045) !important;
+  border-top: 1px solid rgba(0, 255, 255, 0.15) !important;
+}
+
+/* Làm sáng vừa phải phần tên channel hoặc server */
+#app-mount .header__104ca,
+#app-mount .headerContent__23c08 {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
