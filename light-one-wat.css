@@ -1155,45 +1155,46 @@
   backdrop-filter: none !important;
 }
 
-/* === Dark Miku Balance Overlay === */
+/* === Miku Night Balance v2 === */
 
 /* Tổng thể nền Discord */
 .appMount_fae9dd, #app-mount {
-  background-color: rgba(15, 20, 25, 0.85) !important; /* nền tối nhẹ, vẫn trong suốt */
-  backdrop-filter: brightness(0.9) contrast(1.05) !important; /* giữ nét nền */
+  background-color: rgba(10, 12, 15, 0.9) !important; /* tối hơn */
+  backdrop-filter: brightness(0.85) contrast(1.05) !important; /* giữ chi tiết nền */
 }
 
-/* Thanh trên cùng (thanh tên server hoặc DM) */
+/* Thanh trên cùng (server name / DM bar) */
 .titleBar_a934d8, .container_a4d4d9 {
-  background-color: rgba(60, 60, 60, 0.55) !important; /* xám mờ nhẹ */
-  backdrop-filter: blur(6px) !important;
+  background-color: rgba(35, 35, 35, 0.6) !important;
+  backdrop-filter: blur(5px) brightness(0.95) !important;
 }
 
-/* Sidebar trái (server list + kênh) */
+/* Sidebar trái */
 .sidebar_ded4b5, .wrapper_fea3ef {
-  background-color: rgba(40, 40, 40, 0.55) !important;
-  backdrop-filter: blur(8px) brightness(0.95) !important;
+  background-color: rgba(25, 25, 25, 0.65) !important;
+  backdrop-filter: blur(6px) brightness(0.9) !important;
 }
 
 /* Danh sách thành viên bên phải */
 .membersWrap__90226, .container_cbd271 {
-  background-color: rgba(40, 40, 40, 0.55) !important;
-  backdrop-filter: blur(8px) brightness(0.95) !important;
+  background-color: rgba(25, 25, 25, 0.65) !important; 
+  backdrop-filter: blur(6px) brightness(0.9) !important; 
 }
 
-/* Chat box / nội dung tin nhắn */
+/* Chatbox và phần nhập tin nhắn */
 .chatContent_f087cb, .form_d8a4a1 {
-  background-color: rgba(25, 25, 25, 0.45) !important; /* tối hơn nền một chút */
-  backdrop-filter: blur(5px) !important;
+  background-color: rgba(15, 15, 15, 0.55) !important; /* tối hơn nền một chút */
+  backdrop-filter: blur(6px) brightness(0.9) !important;
 }
 
-/* Tin nhắn hiển thị rõ hơn trên nền */
+/* Bong bóng tin nhắn */
 .messageListItem_d5deea, .message_d5deea {
-  background-color: rgba(30, 30, 30, 0.35) !important;
-  backdrop-filter: brightness(1.1);
+  background-color: rgba(20, 20, 20, 0.35) !important;
+  backdrop-filter: brightness(1.05) !important;
 }
 
-/* Hiệu ứng làm nét nền tổng thể */
+/* Hiệu ứng tổng thể */
 .layer__2efaa {
-  backdrop-filter: brightness(0.95) contrast(1.05) !important;
+  backdrop-filter: brightness(0.9) contrast(1.05) !important;
 }
+
