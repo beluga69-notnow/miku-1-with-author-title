@@ -1155,41 +1155,45 @@
   backdrop-filter: none !important;
 }
 
-/* === Miku-1 — Balanced Bright Mode === */
+/* === Dark Miku Balance Overlay === */
 
-/* Thanh trên cùng (server, DM title) */
-#app-mount .title_c38106,
-#app-mount .container__26baa {
-  background-color: rgba(255, 255, 255, 0.07) !important;
-  backdrop-filter: blur(2px) !important;
-  border-bottom: 1px solid rgba(0, 255, 255, 0.25) !important;
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.05) !important;
+/* Tổng thể nền Discord */
+.appMount_fae9dd, #app-mount {
+  background-color: rgba(15, 20, 25, 0.85) !important; /* nền tối nhẹ, vẫn trong suốt */
+  backdrop-filter: brightness(0.9) contrast(1.05) !important; /* giữ nét nền */
 }
 
-/* Khu vực chat (tin nhắn, vùng gõ) */
-#app-mount .chatContent__5dca8,
-#app-mount .form_f75fb0,
-#app-mount .channelTextArea__74017,
-#app-mount .scrollableContainer__74017 {
-  background-color: rgba(10, 15, 30, 0.35) !important;
-  backdrop-filter: blur(4px) !important;
-  border: 1px solid rgba(0, 255, 255, 0.12) !important;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05) !important;
+/* Thanh trên cùng (thanh tên server hoặc DM) */
+.titleBar_a934d8, .container_a4d4d9 {
+  background-color: rgba(60, 60, 60, 0.55) !important; /* xám mờ nhẹ */
+  backdrop-filter: blur(6px) !important;
 }
 
-/* Sidebar, member list sáng nhẹ để không bị “biến mất” */
-#app-mount .sidebar_c48ade,
-#app-mount .members_c8ffbb {
-  background-color: rgba(10, 15, 25, 0.45) !important;
-  backdrop-filter: blur(4px) !important;
+/* Sidebar trái (server list + kênh) */
+.sidebar_ded4b5, .wrapper_fea3ef {
+  background-color: rgba(40, 40, 40, 0.55) !important;
+  backdrop-filter: blur(8px) brightness(0.95) !important;
 }
 
-/* User info panel */
-#app-mount .userPanelInnerThemed_c53b4c {
-  background-color: rgba(20, 25, 40, 0.4) !important;
+/* Danh sách thành viên bên phải */
+.membersWrap__90226, .container_cbd271 {
+  background-color: rgba(40, 40, 40, 0.55) !important;
+  backdrop-filter: blur(8px) brightness(0.95) !important;
 }
 
-/* Giữ nền chính rõ, không làm mờ toàn bộ */
-.appMount_fae9dd {
-  backdrop-filter: none !important;
+/* Chat box / nội dung tin nhắn */
+.chatContent_f087cb, .form_d8a4a1 {
+  background-color: rgba(25, 25, 25, 0.45) !important; /* tối hơn nền một chút */
+  backdrop-filter: blur(5px) !important;
+}
+
+/* Tin nhắn hiển thị rõ hơn trên nền */
+.messageListItem_d5deea, .message_d5deea {
+  background-color: rgba(30, 30, 30, 0.35) !important;
+  backdrop-filter: brightness(1.1);
+}
+
+/* Hiệu ứng làm nét nền tổng thể */
+.layer__2efaa {
+  backdrop-filter: brightness(0.95) contrast(1.05) !important;
 }
