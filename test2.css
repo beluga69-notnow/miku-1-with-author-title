@@ -1,0 +1,100 @@
+/* === LemonCat Miku-1 Refined Light Adjust === */
+
+:root {
+  --background: url('https://images.alphacoders.com/632/632525.png');
+  --activetext-colour: white;
+
+  /* 💙 Miku Main Colour */
+  --primary1-colour: rgb(0, 200, 255);
+  --primary2-colour: rgba(0, 180, 255, 0.5);
+  --primary3-colour: rgba(0, 120, 200, 0.6);
+  --primary4-colour: rgba(0, 80, 150, 0.4);
+
+  /* 🌌 Neutral background tones — slightly brighter and smoother */
+  --secondary1-colour: rgba(60, 60, 70, 0.35);
+  --secondary2-colour: rgba(80, 80, 90, 0.45);
+  --secondary3-colour: rgba(15, 15, 20, 0.55);
+  --secondary4-colour: rgba(10, 10, 15, 0.35);
+}
+
+/* === Refined visual adjustments === */
+
+/* Top bar */
+.titleBar_a934d8,
+.container_a4d4d9,
+.title_c38106 {
+  background-color: rgba(25, 25, 35, 0.45) !important;
+  backdrop-filter: blur(4px) brightness(1.05) contrast(1.05) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Sidebar (Direct Messages, Servers) */
+.sidebar_ded4b5,
+.wrapper_fea3ef {
+  background-color: rgba(25, 25, 35, 0.45) !important;
+  backdrop-filter: blur(5px) brightness(1.05) contrast(1.05) !important;
+}
+
+/* Member list (Right column) */
+.membersWrap__90226,
+.container_cbd271 {
+  background-color: rgba(25, 25, 35, 0.45) !important;
+  backdrop-filter: blur(5px) brightness(1.05) contrast(1.05) !important;
+}
+
+/* Chat area */
+.chatContent_f087cb,
+.form_d8a4a1 {
+  background-color: rgba(20, 20, 28, 0.45) !important;
+  backdrop-filter: blur(3px) brightness(1.05) contrast(1.05) !important;
+}
+
+/* Chat input box */
+.form_f75fb0 .scrollableContainer__74017 {
+  background-color: rgba(35, 35, 45, 0.5) !important;
+  backdrop-filter: blur(4px) brightness(1.08) !important;
+  border-radius: 12px !important;
+  color: #fff !important;
+}
+
+/* Settings sidebar (gray, but keep Miku background visible) */
+.standardSidebarView__23e6b,
+.sidebarRegion__23e6b {
+  background-color: rgba(30, 30, 35, 0.7) !important;
+  backdrop-filter: blur(6px) brightness(0.95);
+}
+
+.contentRegion__23e6b {
+  background-color: rgba(20, 20, 25, 0.6) !important;
+  backdrop-filter: blur(5px) brightness(1.0);
+}
+
+/* User popups and modals */
+.userProfileInnerThemedNonPremium__48b20,
+.userProfileInnerThemedPremiumWithoutBanner__48b20,
+.userProfileInnerThemedPremiumWithBanner__48b20 {
+  background-color: rgba(25, 25, 35, 0.55) !important;
+  backdrop-filter: blur(5px) brightness(1.05) !important;
+}
+
+/* Control bar bottom */
+.panels_c48ade {
+  background-color: rgba(20, 20, 25, 0.55) !important;
+  backdrop-filter: blur(3px) brightness(1.05) contrast(1.05) !important;
+}
+
+/* Remove chatbox dark streaks */
+.chatContent_f087cb,
+.messagesWrapper__36d07,
+.chat_f75fb0 {
+  background: transparent !important;
+  backdrop-filter: blur(3px) brightness(1.05) !important;
+}
+
+/* Global tone correction */
+#app-mount {
+  background: var(--background);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(1.05) contrast(1.08) saturate(1.1);
+}
