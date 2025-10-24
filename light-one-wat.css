@@ -1155,40 +1155,40 @@
   backdrop-filter: none !important;
 }
 
-/* === Miku Night Balance (override variables) === */
+/* === Miku Night Balance v4 (dark refine) === */
 :root {
-  --background-primary: rgba(10, 12, 15, 0.9) !important;
-  --background-secondary: rgba(20, 20, 20, 0.75) !important;
-  --background-secondary-alt: rgba(25, 25, 25, 0.7) !important;
-  --background-tertiary: rgba(30, 30, 30, 0.7) !important;
-  --channeltextarea-background: rgba(25, 25, 25, 0.55) !important;
-  --background-floating: rgba(25, 25, 25, 0.75) !important;
-  --background-modifier-hover: rgba(40, 40, 40, 0.6) !important;
-  --background-modifier-active: rgba(40, 40, 40, 0.65) !important;
-  --background-modifier-selected: rgba(45, 45, 45, 0.7) !important;
-  --background-accent: rgba(50, 50, 50, 0.65) !important;
+  --background-primary: rgba(8, 10, 12, 0.9) !important;
+  --background-secondary: rgba(15, 15, 15, 0.75) !important;
+  --background-secondary-alt: rgba(18, 18, 18, 0.75) !important;
+  --background-tertiary: rgba(20, 20, 20, 0.75) !important;
+  --channeltextarea-background: rgba(20, 20, 20, 0.6) !important;
+  --background-floating: rgba(20, 20, 20, 0.75) !important;
+  --background-modifier-hover: rgba(35, 35, 35, 0.6) !important;
+  --background-modifier-active: rgba(35, 35, 35, 0.65) !important;
+  --background-modifier-selected: rgba(40, 40, 40, 0.7) !important;
+  --background-accent: rgba(45, 45, 45, 0.65) !important;
 }
 
 /* Thanh trên */
 .titleBar_a934d8, .container_a4d4d9 {
-  background-color: rgba(35, 35, 35, 0.55) !important;
-  backdrop-filter: blur(5px) brightness(0.9) !important;
+  background-color: rgba(30, 30, 30, 0.6) !important;
+  backdrop-filter: blur(4px) brightness(0.85) !important;
 }
 
 /* Sidebar trái */
 .sidebar_ded4b5, .wrapper_fea3ef {
-  background-color: rgba(25, 25, 25, 0.6) !important;
-  backdrop-filter: blur(6px) brightness(0.9) !important;
+  background-color: rgba(18, 18, 18, 0.65) !important;
+  backdrop-filter: blur(4px) brightness(0.85) !important;
 }
 
 /* Danh sách thành viên */
 .membersWrap__90226, .container_cbd271 {
-  background-color: rgba(25, 25, 25, 0.6) !important;
-  backdrop-filter: blur(6px) brightness(0.9) !important;
+  background-color: rgba(18, 18, 18, 0.65) !important;
+  backdrop-filter: blur(4px) brightness(0.85) !important;
 }
 
 /* Chatbox */
 .chatContent_f087cb, .form_d8a4a1 {
-  background-color: rgba(15, 15, 15, 0.55) !important;
-  backdrop-filter: blur(5px) brightness(0.9) !important;
+  background-color: rgba(12, 12, 12, 0.55) !important;
+  backdrop-filter: blur(3px) brightness(0.88) contrast(1.05) !important;
 }
