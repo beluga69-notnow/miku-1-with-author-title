@@ -41,7 +41,21 @@
     #app-mount .base__398a6 { /* Lớp nền chung */
         background-color: transparent !important; 
     }
+/* TĂNG ĐỘ TRONG SUỐT CHO PANEL KÊNH TRÁI */
+#app-mount .sidebar_c48ade, 
+.sidebar_c48ade .bg__960e4,
+.layers__1c917 .base__398a6,
+#app-mount .scroller_a2ee1c {
+    background-color: transparent !important; 
+    background: transparent !important;
+}
 
+/* LÀM TRONG SUỐT THANH TOPBAR/HEADER */
+#app-mount .title_c38106, 
+#app-mount .header__205b3 {
+    background-color: transparent !important; 
+    border-bottom: 3px solid var(--primary3-colour)
+}
 /*Home and Discover*/
     /*Nitro*/
         #app-mount .applicationStore_f07d62 .card_b5493b { background-color: var(--secondary1-colour); }
