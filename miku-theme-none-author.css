@@ -1,5 +1,5 @@
 :root{
-     --background: url('https://images.alphacoders.com/632/632525.png');
+     --background: url('https://images.alphacoders.com/632/632525.png'); /* Nền Miku */
      --activetext-colour: white;
  
      --primary1-colour: red;
@@ -7,10 +7,17 @@
      --primary3-colour: rgba(100,0,0,0.6);
      --primary4-colour: rgba(100,0,0,0.4);
  
-     --secondary1-colour: rgba(50,50,50,0.3);
-     --secondary2-colour: rgba(100,100,100,0.5);
-     --secondary3-colour: rgba(0,0,0,0.6);
-     --secondary4-colour: rgba(0,0,0,0.3);
+     /* === ĐIỀU CHỈNH ĐỘ TRONG SUỐT CHO CÁC PANEL VÀ NỀN === */
+     --secondary1-colour: rgba(50,50,50,0.1);    /* Panel mờ nhẹ */
+     --secondary2-colour: rgba(100,100,100,0.15); /* Panel hover mờ nhẹ hơn */
+     --secondary3-colour: rgba(0,0,0,0.05);     /* Thanh nhập tin nhắn, tiêu đề mờ nhẹ */
+     --secondary4-colour: transparent;           /* Loại bỏ overlay nền chính */
+     
+     /* Vô hiệu hóa lớp phủ tối mặc định của Discord */
+     --background-primary: transparent !important;
+     --background-secondary: transparent !important;
+     --background-secondary-alt: transparent !important;
+     --background-tertiary: transparent !important;
  }
    
  /*
@@ -28,9 +35,10 @@
         background-size: cover; 
     }
 
+    /* === QUAN TRỌNG: BUỘC LỚP NỀN TRUNG GIAN TRONG SUỐT === */
     #app-mount .bg__960e4,
     #app-mount .app__160d8 { 
-        background-color: var(--secondary4-colour); 
+        background-color: transparent !important; /* Đảm bảo lớp phủ tối bị xóa */
     }
 
 /*Home and Discover*/
@@ -181,6 +189,13 @@
 
 
     /*Channels*/
+        /* === QUAN TRỌNG: LÀM TRONG SUỐT PANEL KÊNH TRÁI === */
+        #app-mount .sidebar_c48ade, 
+        .sidebar_c48ade .bg__960e4,
+        .layers__1c917 .base__398a6 { 
+            background-color: transparent !important; 
+        }
+
         #app-mount .sidebarList_c48ade.sidebarListRounded_c48ade .container__2637a { background-color: transparent; }
         #app-mount .sidebarList_c48ade.sidebarListRounded_c48ade .header_f37cb1 { background-color: var(--secondary3-colour); }  
         
@@ -332,6 +347,7 @@
 
 
     /*Messages*/
+        /* === QUAN TRỌNG: LÀM TRONG SUỐT KHU VỰC CHAT VÀ NỘI DUNG CHÍNH === */
         #app-mount .chatContent_f75fb0,
         #app-mount .chat_f75fb0,
         #app-mount .chatContent_f75fb0 .wrapper_d852db,
@@ -395,9 +411,10 @@
         }
         #app-mount .hasReply_c19a55 .buttonContainer_c19a55 .wrapper_f7ecac { margin-top: 24px; }
 
+        /* Thanh nhập tin nhắn */
         #app-mount .form_f75fb0 .wrapper__44df5,
         #app-mount .form_f75fb0 .scrollableContainer__74017 {
-            background-color: var(--secondary3-colour);
+            background-color: var(--secondary3-colour); /* Màu mờ nhẹ (0.05) */
         }
 
         #app-mount .form_f75fb0 .channelTextArea_f75fb0 { background-color: transparent; }
@@ -476,9 +493,10 @@
             }
 
 /*Server Members*/
+    /* === QUAN TRỌNG: LÀM TRONG SUỐT PANEL THÀNH VIÊN BÊN PHẢI === */
     #app-mount .container_c8ffbb,
     #app-mount .members_c8ffbb { 
-        background-color: transparent; 
+        background-color: transparent !important; 
     }
 
     #app-mount .member__5d473 {
@@ -641,7 +659,7 @@
         background-color: var(--secondary3-colour);
     }
 
-    /*User Settings*/
+    /*User Popup*/
         #app-mount .accountProfileCard__1fed1 {background-color: var(--secondary1-colour);}   
         
         #app-mount .accountProfileCard__1fed1 .background__1fed1 { background-color: var(--secondary3-colour); }
@@ -1104,34 +1122,33 @@
 #app-mount .title_c38106::before {
     content: none !important;
 }
-
         position: left;
         margin-right: 10px;
     }
+    /* === QUAN TRỌNG: LÀM TRONG SUỐT THANH TOPBAR/HEADER CHÍNH === */
     #app-mount .title_c38106 {
-        background-color: var(--secondary3-colour);
+        background-color: transparent !important; /* Buộc trong suốt */
         border-bottom: 3px solid var(--primary3-colour)
 
     }
 /* Left panel */
 .left-panel {
-  background: #2a2a2a !important;  /* xám đậm vừa */
+  background: transparent !important;  /* Buộc trong suốt */
   border-right: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* Top bar 2.0 (color only */
 .top-bar {
-  background: #252525 !important; /* bớt đen, cùng tông */
+  background: transparent !important; /* Buộc trong suốt */
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* If panel have it owns header */
 .left-panel-header {
-  background: #2a2a2a !important;
+  background: transparent !important; /* Buộc trong suốt */
 }
 
 /* If the top bar had a too harsh shadow */
 .top-bar {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important; /* Giảm bóng đổ tối */
 }
-
