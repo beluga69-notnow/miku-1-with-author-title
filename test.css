@@ -1,5 +1,5 @@
 :root{
-     --background: url('https://images.alphacoders.com/632/632525.png');
+     --background: url('https://images.alphacoders.com/632/632525.png'); /* Nền Miku */
      --activetext-colour: white;
  
      --primary1-colour: red;
@@ -7,16 +7,25 @@
      --primary3-colour: rgba(100,0,0,0.6);
      --primary4-colour: rgba(100,0,0,0.4);
  
-     --secondary1-colour: rgba(50,50,50,0.3);
-     --secondary2-colour: rgba(100,100,100,0.5);
-     --secondary3-colour: rgba(0,0,0,0.6);
-     --secondary4-colour: rgba(0,0,0,0.3);
+     /* === CHUYỂN SANG TRONG SUỐT TUYỆT ĐỐI HOẶC MÀU TRẮNG MỜ (Giảm hiệu ứng tối) === */
+     --secondary1-colour: rgba(255,255,255,0.05);    /* Panel mờ trắng nhẹ (5% mờ) */
+     --secondary2-colour: rgba(255,255,255,0.1);     /* Panel hover mờ trắng nhẹ hơn (10% mờ) */
+     --secondary3-colour: transparent;               /* Thanh nhập tin nhắn, tiêu đề -> TRONG SUỐT */
+     --secondary4-colour: transparent;               /* Loại bỏ overlay nền chính -> TRONG SUỐT */
+     
+     /* Vô hiệu hóa lớp phủ tối mặc định của Discord */
+     --background-primary: transparent !important;
+     --background-secondary: transparent !important;
+     --background-secondary-alt: transparent !important;
+     --background-tertiary: transparent !important;
  }
    
  /*
- Theme Owned and Made by VaporousCreeper#9514, based and edited by beluga24501
+ Theme Owned and Made by VaporousCreeper#9514
+   
+ Background Img: https://getwallpapers.com/wallpaper/full/9/5/f/612107.jpg 
  
- The items above are not owned by me, They go to there respected owners 
+ The items above are not owned by me, They go to there respected owners. These code I use from VaporousCreeper#9514,  so I based on this to make Miku theme on Discord
  */
  
 /*Background  image*/
@@ -26,9 +35,11 @@
         background-size: cover; 
     }
 
+    /* === QUAN TRỌNG: BUỘC LỚP NỀN TRUNG GIAN TRONG SUỐT === */
     #app-mount .bg__960e4,
-    #app-mount .app__160d8 { 
-        background-color: var(--secondary4-colour); 
+    #app-mount .app__160d8,
+    #app-mount .base__398a6 { /* Lớp nền chung */
+        background-color: transparent !important; 
     }
 
 /*Home and Discover*/
@@ -179,6 +190,16 @@
 
 
     /*Channels*/
+        /* === TĂNG ĐỘ TRONG SUỐT CHO PANEL KÊNH TRÁI VÀ SCROLLER BÊN TRONG === */
+        #app-mount .sidebar_c48ade, 
+        .sidebar_c48ade .bg__960e4,
+        .layers__1c917 .base__398a6,
+        #app-mount .privateChannels__35e86 .scroller__99e7c, /* DM list scroller */
+        #app-mount .scroller_a2ee1c { /* Channel list scroller */
+            background-color: transparent !important; 
+            background: transparent !important;
+        }
+
         #app-mount .sidebarList_c48ade.sidebarListRounded_c48ade .container__2637a { background-color: transparent; }
         #app-mount .sidebarList_c48ade.sidebarListRounded_c48ade .header_f37cb1 { background-color: var(--secondary3-colour); }  
         
@@ -330,6 +351,7 @@
 
 
     /*Messages*/
+        /* === QUAN TRỌNG: LÀM TRONG SUỐT KHU VỰC CHAT VÀ NỘI DUNG CHÍNH === */
         #app-mount .chatContent_f75fb0,
         #app-mount .chat_f75fb0,
         #app-mount .chatContent_f75fb0 .wrapper_d852db,
@@ -393,9 +415,10 @@
         }
         #app-mount .hasReply_c19a55 .buttonContainer_c19a55 .wrapper_f7ecac { margin-top: 24px; }
 
+        /* Thanh nhập tin nhắn */
         #app-mount .form_f75fb0 .wrapper__44df5,
         #app-mount .form_f75fb0 .scrollableContainer__74017 {
-            background-color: var(--secondary3-colour);
+            background-color: var(--secondary3-colour); /* Màu mờ nhẹ (0.05) */
         }
 
         #app-mount .form_f75fb0 .channelTextArea_f75fb0 { background-color: transparent; }
@@ -474,9 +497,10 @@
             }
 
 /*Server Members*/
+    /* === LÀM TRONG SUỐT PANEL THÀNH VIÊN BÊN PHẢI === */
     #app-mount .container_c8ffbb,
     #app-mount .members_c8ffbb { 
-        background-color: transparent; 
+        background-color: transparent !important; 
     }
 
     #app-mount .member__5d473 {
@@ -639,7 +663,7 @@
         background-color: var(--secondary3-colour);
     }
 
-    /*User Settings*/
+    /*User Popup*/
         #app-mount .accountProfileCard__1fed1 {background-color: var(--secondary1-colour);}   
         
         #app-mount .accountProfileCard__1fed1 .background__1fed1 { background-color: var(--secondary3-colour); }
@@ -1098,98 +1122,38 @@
     #app-mount .contentWrapper__08434 .result__2dc39[style*="background-color: var(--premium-tier-1"] {background-color: var(--primary3-colour)!important;}
     #app-mount .contentWrapper__08434 .result__2dc39[style*="background-color: rgb(146, 154, 250);"] {background-color: var(--primary2-colour)!important}
 
-/*TopBar*/ 
+/*TopBar - (no author title)*/ 
 #app-mount .title_c38106::before {
-    content: "Miku-1 Edition by LemonCat (based on GGO Kirito v1.4.0 By VaporousCreeper";
-    color: rgba(255,255,255,0.5);
-    font-weight: 500;
-    margin-right: 10px;
+    content: none !important;
 }
-
         position: left;
         margin-right: 10px;
     }
-    #app-mount .title_c38106 {
-        background-color: var(--secondary3-colour);
+    /* === QUAN TRỌNG: LÀM TRONG SUỐT THANH TOPBAR/HEADER CHÍNH === */
+    #app-mount .title_c38106, 
+    #app-mount .header__205b3, /* Lớp wrapper header chính */
+    #app-mount .header_c48ade { /* Lớp header của Channels/DM */
+        background-color: transparent !important; /* Buộc trong suốt */
         border-bottom: 3px solid var(--primary3-colour)
     }
-/* === Darker Miku Main Theme === */
-
-/* Remove excessive bright override */
-* {
-  backdrop-filter: none !important;
+/* Left panel */
+.left-panel {
+  background: transparent !important;  /* Buộc trong suốt */
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Overall background */
-:root {
-  --background-primary: rgba(10, 10, 15, 0.85) !important;
-  --background-secondary: rgba(12, 12, 18, 0.8) !important;
-  --background-secondary-alt: rgba(15, 15, 20, 0.75) !important;
-  --background-tertiary: rgba(18, 18, 25, 0.75) !important;
-  --channeltextarea-background: rgba(15, 15, 20, 0.65) !important;
-  --background-floating: rgba(15, 15, 20, 0.75) !important;
-  --background-modifier-hover: rgba(35, 35, 35, 0.45) !important;
-  --background-modifier-selected: rgba(40, 40, 40, 0.55) !important;
-  --background-accent: rgba(50, 50, 60, 0.55) !important;
-}
-
-/* Top bar */
-.titleBar_a934d8, .container_a4d4d9, .title_c38106 {
-  background-color: rgba(20, 20, 25, 0.6) !important;
-  backdrop-filter: blur(2.5px) brightness(0.9) !important;
+/* Top bar 2.0 (color only */
+.top-bar {
+  background: transparent !important; /* Buộc trong suốt */
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Left sidebar */
-.sidebar_ded4b5, .wrapper_fea3ef {
-  background-color: rgba(15, 15, 20, 0.6) !important;
-  backdrop-filter: blur(2.5px) brightness(0.88) contrast(1.05) !important;
+/* If panel have it owns header */
+.left-panel-header {
+  background: transparent !important; /* Buộc trong suốt */
 }
 
-/* Member list (right side) */
-.membersWrap__90226, .container_cbd271 {
-  background-color: rgba(15, 15, 20, 0.6) !important;
-  backdrop-filter: blur(2.5px) brightness(0.88) contrast(1.05) !important;
-}
-
-/* Main chat area */
-.chatContent_f087cb, .form_d8a4a1 {
-  background-color: rgba(10, 10, 15, 0.55) !important;
-  backdrop-filter: blur(1.5px) brightness(0.9) contrast(1.05) !important;
-}
-
-/* Bottom user panel (mic/headphone/settings) */
-.panels_c48ade {
-  background-color: rgba(18, 18, 22, 0.65) !important;
-  backdrop-filter: blur(2px) brightness(0.9) !important;
-}
-
-/* Chat message bubbles */
-.message__5126c .container_b7e1cb,
-.message__5126c .contents_c19a55 {
-  background-color: rgba(20, 20, 25, 0.35) !important;
-  border-radius: 8px !important;
-}
-
-/* Chat input box */
-.form_f75fb0 .scrollableContainer__74017 {
-  background-color: rgba(25, 25, 30, 0.45) !important;
-  border-radius: 12px !important;
-  color: #fff !important;
-}
-
-/* User popup/profile */
-.userProfileInnerThemedNonPremium__48b20,
-.userProfileInnerThemedPremiumWithoutBanner__48b20,
-.userProfileInnerThemedPremiumWithBanner__48b20 {
-  background-color: rgba(25, 25, 30, 0.65) !important;
-  backdrop-filter: blur(3px) brightness(0.9) !important;
-}
-
-/* Overall tone adjustment: darker background, sharper Miku image */
-#app-mount {
-  background: var(--background);
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.88) contrast(1.08) saturate(1.05);
+/* If the top bar had a too harsh shadow */
+.top-bar {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important; /* Giảm bóng đổ tối */
 }
